@@ -7,9 +7,9 @@ const Profile: FC<ProfileProps> = () => {
     <svg
       className="mr-4 h-6 w-6"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       stroke="currentColor"
       viewBox="0 0 24 24"
     >

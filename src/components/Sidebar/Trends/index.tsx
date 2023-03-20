@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import map from "lodash/map";
 import range from "lodash/range";
 import { faker } from "@faker-js/faker";
@@ -26,9 +26,9 @@ const Trends: FC<TrendsProps> = () => {
             <svg
               className="m-2 h-6 w-6"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
@@ -43,7 +43,7 @@ const Trends: FC<TrendsProps> = () => {
       {map(range(1, 6), (val) => {
         const keyword = faker.random.words();
         return (
-          <>
+          <Fragment key={val}>
             <div
               className="flex cursor-pointer hover:bg-gray-50"
               onClick={() => dispatch(redirectHashtags(keyword))}
@@ -79,9 +79,9 @@ const Trends: FC<TrendsProps> = () => {
                   <svg
                     className="m-2 h-5 w-5"
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -91,7 +91,7 @@ const Trends: FC<TrendsProps> = () => {
               </div>
             </div>
             <hr className="border-gray-800" />
-          </>
+          </Fragment>
         );
       })}
 

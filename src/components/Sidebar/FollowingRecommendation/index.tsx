@@ -2,7 +2,7 @@ import { faker } from "@faker-js/faker";
 import Avatar from "elements/User/Avatar";
 import map from "lodash/map";
 import range from "lodash/range";
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { Link } from "react-router-dom";
 import Button from "elements/Button";
 import { followProfile, openProfile } from "store/thunks/profile";
@@ -26,7 +26,7 @@ const FollowingRecommendation: FC<FolloringRecommendationProps> = () => {
       {map(range(3), (val) => {
         const name = faker.name.fullName();
         return (
-          <>
+          <Fragment key={val}>
             <div key={val} className="flex flex-shrink-0">
               <div className="flex-1 flex ">
                 <div className="flex items-center w-48 ml-2">
@@ -45,7 +45,7 @@ const FollowingRecommendation: FC<FolloringRecommendationProps> = () => {
               </div>
             </div>
             <hr className="border-gray-800" />
-          </>
+          </Fragment>
         );
       })}
 

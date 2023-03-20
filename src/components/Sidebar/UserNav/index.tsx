@@ -29,10 +29,11 @@ const UserNav: FC<HeaderProps> = () => {
           <nav className="mt-5 px-2">
             {map(links, ({ to, Icon, label }) => (
               <Link
+                key={label}
                 to={to}
                 className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-semibold rounded-full hover:bg-gray-100 hover:text-gray-800"
               >
-                <Icon />
+                <Icon />stroke-width
                 {label}
               </Link>
             ))}

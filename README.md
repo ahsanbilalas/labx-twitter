@@ -1,5 +1,3 @@
-`react-starter-kit` is starter boilerplate for a universal web app to give the best the development experience to developer. It encourages the developer to use the best development practices and helps to focus on the development of app requirements instead of spending the time on creating the application architecture.
-
 ## Getting Started
 
 In order to get started developing, you'll need to do a few things first.
